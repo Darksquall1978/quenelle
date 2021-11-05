@@ -12,4 +12,5 @@ cd..
 Color 0b & Mode con cols=25 lines=2
 @echo Demarrage launcher ok
 Launcher.exe
+exit
 
