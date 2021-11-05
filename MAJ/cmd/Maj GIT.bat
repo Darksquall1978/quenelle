@@ -1,7 +1,7 @@
 @echo off
 Color 0e & Mode con cols=50 lines=40
 
-git remote add valheim git://github.com/Darksquall1978/Valheim.git
+git remote add valheim git://github.com/Darksquall1978/quenelle.git
 
 git fetch valheim
 
