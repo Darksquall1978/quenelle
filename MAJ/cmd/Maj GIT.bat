@@ -19,7 +19,6 @@ cd..
 RMDIR /s /q Git
 
 Launcher.exe
-
 exit
 
 
