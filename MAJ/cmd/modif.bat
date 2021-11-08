@@ -4,4 +4,5 @@ cd..
 Launcher.exe
 
 exit
+.
 
