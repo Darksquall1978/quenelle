@@ -18,7 +18,7 @@ modif.bat
 
 cd..
 cd..
-::RMDIR /s /q Git
+RMDIR /s /q Git
 
 
 
