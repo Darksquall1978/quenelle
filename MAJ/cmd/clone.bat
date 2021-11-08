@@ -22,6 +22,9 @@ robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers
 robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins
 robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off
 copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
+copy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
+copy maj\cmd\quenelle\maj\cmd\reparer.bat maj\cmd\reparer.bat
+copy maj\cmd\quenelle\maj\cmd\reparerfin.bat maj\cmd\reparerfin.bat
 
 @echo off
 RMDIR /s /q maj\cmd\quenelle 
