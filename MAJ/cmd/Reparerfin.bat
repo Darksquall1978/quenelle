@@ -6,7 +6,7 @@ timeout /t 5 /nobreak > nul
 @echo Redemarrage du Launcher
 timeout /t 2 /nobreak > nul
 
-cd..
+
 launcher.exe
 dir
 .
