@@ -29,7 +29,7 @@ RMDIR /s /q maj\cmd\quenelle
 start maj\cmd\reparerfin.bat
 
 exit
-exit
+.
 
 
 @echo off ---------------------------temp---------------------------
