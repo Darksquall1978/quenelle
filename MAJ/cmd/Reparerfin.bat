@@ -9,7 +9,7 @@ cd..
 cd..
 launcher.exe
 exit
-
+.
 
 
 
