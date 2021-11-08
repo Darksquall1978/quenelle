@@ -27,6 +27,7 @@ copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
 RMDIR /s /q maj\cmd\quenelle 
 
 exit
+exit
 
 
 @echo off ---------------------------temp---------------------------
