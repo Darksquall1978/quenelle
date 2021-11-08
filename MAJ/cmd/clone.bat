@@ -9,7 +9,7 @@ RMDIR /s /q .git
 RMDIR /s /q bepinex\cache
 RMDIR /s /q bepinex\core
 RMDIR /s /q bepinex\patchers
-RMDIR /s /q bepinex\plugins
+::RMDIR /s /q bepinex\plugins
 RMDIR /s /q bepinex\plugins-off
 timeout /t 2 /nobreak > nul
 
