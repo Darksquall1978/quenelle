@@ -12,6 +12,6 @@ Color 0c & Mode con cols=25 lines=2
 timeout /t 3 /nobreak > nul
 clone.bat 
 exit
-
+.
 
 
