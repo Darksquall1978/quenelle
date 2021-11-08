@@ -8,7 +8,7 @@ timeout /t 2 /nobreak > nul
 
 
 launcher.exe
-dir
+exit
 .
 
 
