@@ -26,6 +26,8 @@ copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
 @echo off
 RMDIR /s /q maj\cmd\quenelle 
 
+reparerfin.bat
+
 exit
 exit
 
