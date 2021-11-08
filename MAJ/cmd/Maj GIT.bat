@@ -14,7 +14,7 @@ timeout /t 3 /nobreak > nul
 
 RMDIR /s /q quenelle
 
-modif.bat
+::modif.bat
 
 cd..
 cd..
