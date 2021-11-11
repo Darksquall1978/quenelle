@@ -9,7 +9,7 @@ cd ..
 rename winhttp_.dll winhttp.dll
 timeout /t 2 /nobreak > nul
 start steam://rungameid/892970-force-vulkan
-timeout /t 2 /nobreak > nul
+timeout /t 4 /nobreak > nul
 rename winhttp.dll winhttp_.dll
 
 
