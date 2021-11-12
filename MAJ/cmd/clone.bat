@@ -9,6 +9,7 @@ RMDIR /s /q .git
 RMDIR /s /q bepinex\cache
 RMDIR /s /q bepinex\core
 RMDIR /s /q bepinex\patchers
+RMDIR /s /q bepinex\launcher.apm
 ::RMDIR /s /q bepinex\plugins
 ::RMDIR /s /q bepinex\plugins-off
 timeout /t 2 /nobreak > nul
@@ -25,6 +26,7 @@ copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
 copy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
 copy maj\cmd\quenelle\maj\cmd\reparer.bat maj\cmd\reparer.bat
 copy maj\cmd\quenelle\maj\cmd\reparerfin.bat maj\cmd\reparerfin.bat
+copy maj\cmd\quenelle\launcher.apm
 
 @echo off
 RMDIR /s /q maj\cmd\quenelle 
