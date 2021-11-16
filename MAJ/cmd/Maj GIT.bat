@@ -1,5 +1,5 @@
 @echo off
-Color 0e & Mode con cols=50 lines=40
+Color 0e & Mode con cols=50 lines=80
 
 git remote add valheim git://github.com/Darksquall1978/quenelle.git
 
