@@ -5,7 +5,7 @@ git remote add valheim git://github.com/Darksquall1978/quenelle.git
 
 ::git fetch valheim
 
-git fetch
+::git fetch
 
 git pull
 
