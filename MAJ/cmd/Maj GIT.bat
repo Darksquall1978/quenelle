@@ -22,7 +22,7 @@ cd..
 
 
 
-Launcher.exe
+::Launcher.exe
 exit
 
 
