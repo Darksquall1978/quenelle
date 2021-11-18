@@ -11,7 +11,7 @@ git fetch
 
 git pull
 
-@echo Mise a jour OK
+::@echo Mise a jour OK
 timeout /t 3 /nobreak > nul
 
 ::RMDIR /s /q quenelle
