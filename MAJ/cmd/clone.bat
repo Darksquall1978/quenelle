@@ -15,7 +15,7 @@ timeout /t 2 /nobreak > nul
 
 
 @echo off
-robocopy maj\cmd\quenelle\.git .git /mt /z /e 
+::robocopy maj\cmd\quenelle\.git .git /mt /z /e 
 ::robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache
 ::robocopy maj\cmd\quenelle\bepinex\core BepInEx\core
 ::robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers
