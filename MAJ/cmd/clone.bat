@@ -1,11 +1,11 @@
 @echo off
 Color 0A & Mode con cols=120 lines=100
-git clone https://github.com/Darksquall1978/quenelle.git 
+::git clone https://github.com/Darksquall1978/quenelle.git 
 
 cd..
 cd..
 @echo off
-RMDIR /s /q .git
+::RMDIR /s /q .git
 ::RMDIR /s /q bepinex\cache
 ::RMDIR /s /q bepinex\core
 ::RMDIR /s /q bepinex\patchers
@@ -15,25 +15,25 @@ timeout /t 2 /nobreak > nul
 
 
 @echo off
-robocopy maj\cmd\quenelle\.git .git /mt /z /e 
+::robocopy maj\cmd\quenelle\.git .git /mt /z /e 
 ::robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache
 ::robocopy maj\cmd\quenelle\bepinex\core BepInEx\core
 ::robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers
 ::robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins
 ::robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off
-copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
-copy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
+::copy maj\cmd\quenelle\maj\cmd\clone.bat maj\cmd\clone.bat
+::copy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
 ::copy maj\cmd\quenelle\maj\cmd\reparer.bat maj\cmd\reparer.bat
 ::copy maj\cmd\quenelle\maj\cmd\reparerfin.bat maj\cmd\reparerfin.bat
 
 
 @echo off
-RMDIR /s /q maj\cmd\quenelle 
+::RMDIR /s /q maj\cmd\quenelle 
 
 start maj\cmd\reparerfin.bat
 
 exit
-.
+
 
 
 @echo off ---------------------------temp---------------------------
