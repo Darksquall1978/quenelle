@@ -1,11 +1,11 @@
 @echo off
 Color 0A & Mode con cols=120 lines=100
-git clone https://github.com/Darksquall1978/quenelle.git 
+::git clone https://github.com/Darksquall1978/quenelle.git 
 
 cd..
 cd..
 @echo off
-RMDIR /s /q .git
+::RMDIR /s /q .git
 ::RMDIR /s /q bepinex\cache
 ::RMDIR /s /q bepinex\core
 ::RMDIR /s /q bepinex\patchers
