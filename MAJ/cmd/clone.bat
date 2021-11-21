@@ -1,6 +1,6 @@
 @echo off
 Color 0A & Mode con cols=120 lines=100
-::git clone https://github.com/Darksquall1978/quenelle.git 
+git clone https://github.com/Darksquall1978/quenelle.git 
 
 cd..
 cd..
@@ -15,7 +15,7 @@ timeout /t 2 /nobreak > nul
 
 
 @echo off
-::robocopy maj\cmd\quenelle\.git .git /mt /z /e 
+robocopy maj\cmd\quenelle\.git .git /mt /z /e 
 ::robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache
 ::robocopy maj\cmd\quenelle\bepinex\core BepInEx\core
 ::robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers
