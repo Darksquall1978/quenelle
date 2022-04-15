@@ -5,9 +5,9 @@ Color 0e & Mode con cols=100 lines=40
 
 
 
-git fetch valheim
+::git fetch valheim
 
-git fetch
+::git fetch
 
 git pull
 
