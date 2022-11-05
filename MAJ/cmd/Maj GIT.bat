@@ -11,7 +11,7 @@ Color 0e & Mode con cols=100 lines=40
 
 git pull
 
-@echo Mise a jour OK
+::@echo Mise a jour OK
 timeout /t 3 /nobreak > nul
 
 ::RMDIR /s /q quenelle
