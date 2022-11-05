@@ -16,13 +16,13 @@ timeout /t 3 /nobreak > nul
 
 ::RMDIR /s /q quenelle
 
-modif.bat
+::modif.bat
 
 cd..
 cd..
 ::RMDIR /s /q Git
 
-::Launcher.exe
+Launcher.exe
 exit
 
 
