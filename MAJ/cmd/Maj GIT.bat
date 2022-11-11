@@ -17,7 +17,7 @@ timeout /t 3 /nobreak > nul
 ::RMDIR /s /q quenelle
 
 modif.bat
-@echo Vous pouvez fermer cette fenetre
+::@echo Vous pouvez fermer cette fenetre
 cd..
 cd..
 ::RMDIR /s /q Git
