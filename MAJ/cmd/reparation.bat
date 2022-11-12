@@ -95,6 +95,8 @@ timeout /t 1 /nobreak > nul
 ::pause
 copy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /y
 timeout /t 1 /nobreak > nul
+robocopy maj\cmd\quenelle\maj\cmd maj\cmd /mt /z /e 
+timeout /t 1 /nobreak > nul
 
 
 ::---------------------------------------------------------------------
