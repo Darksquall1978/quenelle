@@ -147,4 +147,4 @@ exit
 ::move /y maj\cmd\valheim\launcher.exe
 ::move /y maj\cmd\valheim\winhttp_.dll
 
-::confirme
+::confirme:
