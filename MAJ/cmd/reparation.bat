@@ -1,3 +1,5 @@
+::---12/11/1022---::  14H18
+
 @echo off
 Color 0A & Mode con cols=120 lines=100
 git clone https://github.com/Darksquall1978/quenelle.git 
@@ -17,11 +19,11 @@ timeout /t 1 /nobreak > nul
 @echo  suppression du dossier patchers
 RMDIR /s /q bepinex\patchers
 timeout /t 1 /nobreak > nul
-::@echo  suppression du dossier plugins
-::RMDIR /s /q bepinex\plugins
-::timeout /t 1 /nobreak > nul
-::@echo  suppression du dossier config
-::RMDIR /s /q bepinex\config
+@echo  suppression du dossier plugins
+RMDIR /s /q bepinex\plugins
+timeout /t 1 /nobreak > nul
+@echo  suppression du dossier config
+RMDIR /s /q bepinex\config
 timeout /t 1 /nobreak > nul
 @echo  suppression du dossier plugins-off
 RMDIR /s /q bepinex\plugins-off
@@ -38,8 +40,9 @@ timeout /t 1 /nobreak > nul
 @echo  suppression du dossier vplus-data
 RMDIR /s /q vplus-data
 timeout /t 1 /nobreak > nul
-
-::pause
+::@echo  suppression du fichier doorstop_config.ini
+::del /s /q doorstop_config.ini
+::timeout /t 1 /nobreak > nul
 
 @echo  clonage des fichiers source
 
@@ -52,29 +55,27 @@ robocopy maj\cmd\quenelle\.git .git /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy maj\cmd\quenelle\bepinex\core BepInEx\core /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\core BepInEx\core
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /y
-timeout /t 1 /nobreak > nul
 robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
-::timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy maj\cmd\quenelle\bepinex\config BepInEx\config /y
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\config BepInEx\config
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
@@ -94,22 +95,10 @@ robocopy maj\cmd\quenelle\vplus-data vplus-data /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /y
+copy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /y
 timeout /t 1 /nobreak > nul
-::ok
-::pause
 robocopy maj\cmd\quenelle\maj\cmd maj\cmd /mt /z /e 
 timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy maj\cmd\quenelle\Launcher.apm Launcher.apm /y
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll /y
-timeout /t 1 /nobreak > nul
-::ok
-::pause
 
 
 ::---------------------------------------------------------------------
@@ -160,4 +149,4 @@ exit
 ::move /y maj\cmd\valheim\launcher.exe
 ::move /y maj\cmd\valheim\winhttp_.dll
 
-::confirme:
+::confirme
