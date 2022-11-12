@@ -113,7 +113,7 @@ timeout /t 1 /nobreak > nul
 ::robocopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll 
 ::timeout /t 1 /nobreak > nul
 
-robocopy maj\cmd\quenelle\maj\cmd maj /mt /z /e 
+
 ::timeout /t 1 /nobreak > nul
 ::robocopy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
 ::timeout /t 1 /nobreak > nul
