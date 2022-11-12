@@ -124,19 +124,6 @@ timeout /t 1 /nobreak > nul
 
 ::---------------------------------------------------------------------
 
-::robocopy maj\cmd\quenelle\manager manager /mt /z /e 
-::timeout /t 1 /nobreak > nul
-
-
-
-::robocopy maj\cmd\quenelle\Launcher.apm Launcher.apm 
-::timeout /t 1 /nobreak > nul
-::robocopy maj\cmd\quenelle\Launcher.exe Launcher.exe 
-::timeout /t 1 /nobreak > nul
-::robocopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll 
-::timeout /t 1 /nobreak > nul
-
-
 ::timeout /t 1 /nobreak > nul
 ::robocopy maj\cmd\quenelle\maj\cmd\modif.bat maj\cmd\modif.bat
 ::timeout /t 1 /nobreak > nul
@@ -156,15 +143,6 @@ exit
 
 
 @echo off ---------------------------temp---------------------------
-::robocopy maj\cmd\quenelle\doorstop_libs doorstop_libs /mt /z /e 
-::robocopy maj\cmd\quenelle\launcher launcher /mt /z /e 
-::robocopy maj\cmd\quenelle\manager manager /mt /z /e 
-::robocopy maj\cmd\quenelle\unstripped_corlib unstripped_corlib /mt /z /e 
-::robocopy maj\cmd\quenelle\vplus-data vplus-data /mt /z /e 
-::robocopy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /mt /z /e 
-::robocopy maj\cmd\quenelle\Launcher.apm Launcher.apm /mt /z /e 
-::robocopy maj\cmd\quenelle\Launcher.exe Launcher.exe /mt /z /e 
-::robocopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll /mt /z /e 
 ::move /y maj\cmd\valheim\doorstop_config.ini
 ::move /y maj\cmd\valheim\launcher.apm
 ::move /y maj\cmd\valheim\launcher.exe
