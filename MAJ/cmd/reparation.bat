@@ -9,31 +9,31 @@ cd..
 timeout /t 2 /nobreak > nul
 @echo  suppression du .git
 RMDIR /s /q .git
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier cache
 RMDIR /s /q bepinex\cache
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier core
 RMDIR /s /q bepinex\core
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier patchers
 RMDIR /s /q bepinex\patchers
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::@echo  suppression du dossier plugins
 ::RMDIR /s /q bepinex\plugins
 ::timeout /t 1 /nobreak > nul
 ::@echo  suppression du dossier config
 ::RMDIR /s /q bepinex\config
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier plugins-off
 RMDIR /s /q bepinex\plugins-off
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier doorstop_libs
 RMDIR /s /q doorstop_libs
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier launcher
 RMDIR /s /q launcher
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier unstripped_corlib
 RMDIR /s /q unstripped_corlib
 timeout /t 1 /nobreak > nul
