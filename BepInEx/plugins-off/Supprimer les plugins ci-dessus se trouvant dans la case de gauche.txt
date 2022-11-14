@@ -1,6 +1,0 @@
-plugins off
-Pour les utilisateurs ayant upgradé le launcher à partir de la version 1.5
-
-Supprimer les plugins lister ci-dessus se trouvant dans la case de gauche
-
-Dans plugins
