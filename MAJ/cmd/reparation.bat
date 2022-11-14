@@ -113,11 +113,11 @@ timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
-timeout /t 1 /nobreak > nul
+::xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 
