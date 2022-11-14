@@ -40,6 +40,20 @@ timeout /t 1 /nobreak > nul
 @echo  suppression du dossier vplus-data
 RMDIR /s /q vplus-data
 timeout /t 1 /nobreak > nul
+@echo  suppression du fichier ConfigurationManager.xml
+RMDIR /s /q plugins/ConfigurationManager.xml
+@echo  suppression du fichier FloatingItems.dll
+RMDIR /s /q plugins/FloatingItems.dll
+@echo  suppression du fichier manifest.json
+RMDIR /s /q plugins/manifest.json
+@echo  suppression du fichier CW_Jesse.BetterNetworking.dll
+RMDIR /s /q plugins/CW_Jesse.BetterNetworking.dll
+@echo  suppression du fichier DeathTweaks.dll
+RMDIR /s /q plugins/DeathTweaks.dll
+@echo  suppression du fichier ExtendedItemDataFramework.dll
+RMDIR /s /q plugins/ExtendedItemDataFramework.dll
+@echo  suppression du fichier Jotunn.dll
+RMDIR /s /q plugins/Jotunn.dll
 
 ::pause
 
