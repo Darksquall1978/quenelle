@@ -73,51 +73,51 @@ robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\bepinex\config BepInEx\config /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off /mt /z /e
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\doorstop_libs doorstop_libs /mt /z /e
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\launcher launcher /mt /z /e 
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\unstripped_corlib unstripped_corlib /mt /z /e 
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\vplus-data vplus-data /mt /z /e 
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 robocopy maj\cmd\quenelle\maj\cmd maj\cmd /mt /z /e 
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\Launcher.apm Launcher.apm /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
-timeout /t 1 /nobreak > nul
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
-timeout /t 1 /nobreak > nul
+::xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
+::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
 
