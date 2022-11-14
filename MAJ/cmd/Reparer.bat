@@ -1,4 +1,5 @@
-Color 0c & Mode con cols=25 lines=2
+Color 1f & Mode con cols=60 lines=20
+pause
 git pull
 timeout /t 1 /nobreak > nul
 
