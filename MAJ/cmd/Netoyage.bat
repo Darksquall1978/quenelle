@@ -1,7 +1,7 @@
 @echo off
 Color 0A & Mode con cols=120 lines=100
-cd..
-cd..
+
+
 dir
 pause
 @echo  suppression du dossier plugins
