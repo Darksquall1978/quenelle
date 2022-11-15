@@ -1,4 +1,6 @@
 @echo off
+RMDIR /s /q maj\cmd\quenelle
+@echo off
 @echo Clonage en cours....
 @echo off
 Color 0A & Mode con cols=120 lines=100
