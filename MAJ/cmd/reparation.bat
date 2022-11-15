@@ -41,7 +41,7 @@ timeout /t 1 /nobreak > nul
 RMDIR /s /q vplus-data
 timeout /t 1 /nobreak > nul
 
-::pause
+pause
 
 @echo  Copie des fichiers source
 
@@ -72,7 +72,7 @@ timeout /t 1 /nobreak > nul
 robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
 ::timeout /t 1 /nobreak > nul
 ::ok
-::pause
+pause
 xcopy maj\cmd\quenelle\bepinex\config BepInEx\config\ /y 
 timeout /t 1 /nobreak > nul
 ::ok
@@ -119,9 +119,17 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 ::pause
 ::xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
 ::timeout /t 1 /nobreak > nul
-::ok
-::pause
 
+pause
+
+::RMDIR /s /q maj\cmd\quenelle 
+dir
+pause
+start maj\cmd\Suppquenelle.bat
+
+start launcher.exe
+
+exit
 
 ::---------------------------------------------------------------------
 
@@ -136,14 +144,7 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 
 
 
-::RMDIR /s /q maj\cmd\quenelle 
-dir
-pause
-start maj\cmd\Suppquenelle.bat
 
-start launcher.exe
-
-exit
 
 
 
