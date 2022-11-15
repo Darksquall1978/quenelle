@@ -16,7 +16,7 @@ timeout /t 3 /nobreak > nul
 
 ::RMDIR /s /q quenelle
 
-modif.bat
+start modif.bat
 ::@echo Vous pouvez fermer cette fenetre
 cd..
 cd..
