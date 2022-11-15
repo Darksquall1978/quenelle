@@ -137,6 +137,8 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 
 
 ::RMDIR /s /q maj\cmd\quenelle 
+cd..
+cd..
 
 start maj\cmd\Suppquenelle.bat
 
