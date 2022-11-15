@@ -5,7 +5,8 @@ timeout /t 5 /nobreak > nul
 @echo off 
 @echo Redemarrage du Launcher
 timeout /t 2 /nobreak > nul
-
+dir 
+pause
 
 ::launcher.exe
 start \maj\cmd\netoyage.bat
