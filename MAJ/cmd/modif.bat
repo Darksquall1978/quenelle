@@ -1,8 +1,8 @@
 @echo off
 cd..
 cd..
-Launcher.exe
+start Launcher.exe
 
 exit
-.
+
 
