@@ -2,7 +2,6 @@
 @echo off
 timeout /t 2 /nobreak > nul
 Color 0A & Mode con cols=120 lines=100
-cd..
-cd..
+
 @echo off
 RMDIR /s /q maj\cmd\quenelle
