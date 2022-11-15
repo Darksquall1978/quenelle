@@ -8,6 +8,7 @@ timeout /t 1 /nobreak > nul
 @echo Reparation en cours....
 @echo off
 timeout /t 3 /nobreak > nul
-reparation.bat 
+::reparation.bat 
+Clonage.bat
 exit
 
