@@ -43,7 +43,7 @@ timeout /t 1 /nobreak > nul
 
 ::pause
 
-@echo  clonage des fichiers source
+@echo  Copie des fichiers source
 
 timeout /t 2 /nobreak > nul
 
@@ -133,8 +133,7 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 ::timeout /t 1 /nobreak > nul
 
 
-@echo off
-launcher.exe
+
 
 RMDIR /s /q maj\cmd\quenelle 
 
