@@ -5,7 +5,7 @@ git pull
 @echo off 
 timeout /t 1 /nobreak > nul
 
-@echo Reparation en cours....
+@echo Clonage en cours....
 @echo off
 timeout /t 3 /nobreak > nul
 Clonage.bat
