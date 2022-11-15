@@ -136,12 +136,11 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 
 
 ::RMDIR /s /q maj\cmd\quenelle 
-
+pause
 start Suppquenelle.bat
-cd..
-cd..
+pause
 start launcher.exe
-
+pause
 exit
 
 
