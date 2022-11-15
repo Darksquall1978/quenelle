@@ -138,7 +138,7 @@ RMDIR /s /q maj\cmd\quenelle
 
 ::start maj\cmd\reparerfin.bat
 
-cmd/c launcher.exe
+launcher.exe
 exit
 
 
