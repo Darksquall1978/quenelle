@@ -1,5 +1,5 @@
 @echo off
-RMDIR /s /q maj\cmd\quenelle
+::RMDIR /s /q maj\cmd\quenelle
 @echo off
 @echo Clonage en cours....
 @echo off
