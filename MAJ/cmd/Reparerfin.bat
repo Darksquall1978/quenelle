@@ -9,6 +9,7 @@ timeout /t 2 /nobreak > nul
 
 ::launcher.exe
 start \maj\cmd\netoyage.bat
+pause
 exit
 
 
