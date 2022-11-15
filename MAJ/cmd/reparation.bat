@@ -137,8 +137,9 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 RMDIR /s /q maj\cmd\quenelle 
 
 ::start maj\cmd\reparerfin.bat
-launcher.exe
-TASKKILL
+
+cmd/c launcher.exe
+exit
 
 
 
