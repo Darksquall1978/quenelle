@@ -12,6 +12,7 @@ pause
 @echo  suppression du dossier config
 @echo off
 RMDIR /s /q bepinex\config
+dir
 pause
 MAJ/cmd/reparer.bat
 
