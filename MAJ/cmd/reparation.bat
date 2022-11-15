@@ -2,10 +2,6 @@
 Color 0A & Mode con cols=120 lines=100
 git clone https://github.com/Darksquall1978/quenelle.git 
 
-cd..
-dir
-pause
-::cd..
 @echo off
 @echo MAJ du --12/11/2022-- 14H30
 timeout /t 2 /nobreak > nul
