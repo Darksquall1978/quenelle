@@ -2,8 +2,8 @@
 Color 0A & Mode con cols=120 lines=100
 git clone https://github.com/Darksquall1978/quenelle.git 
 
-
-
+cd..
+cd..
 @echo off
 @echo MAJ du --12/11/2022-- 14H30
 timeout /t 2 /nobreak > nul
@@ -41,95 +41,86 @@ timeout /t 1 /nobreak > nul
 RMDIR /s /q vplus-data
 timeout /t 1 /nobreak > nul
 
+::pause
 
-
-@echo  Copie des fichiers source
+@echo  clonage des fichiers source
 
 timeout /t 2 /nobreak > nul
 
 
 
 @echo off 
-robocopy quenelle\.git .git /mt /z /e
-timeout /t 1 /nobreak > nul
-dir
-pause
-robocopy quenelle\bepinex\core BepInEx\core /mt /z /e
+robocopy maj\cmd\quenelle\.git .git /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy quenelle\bepinex\cache BepInEx\cache /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\core BepInEx\core /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy quenelle\bepinex\patchers BepInEx\patchers /mt /z /e
+robocopy maj\cmd\quenelle\bepinex\cache BepInEx\cache /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy quenelle\bepinex\plugins BepInEx\plugins\ /y /r
-
-timeout /t 1 /nobreak > nul
-robocopy quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
-::timeout /t 1 /nobreak > nul
-::ok
-pause
-xcopy quenelle\bepinex\config BepInEx\config\ /y 
+robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-robocopy quenelle\bepinex\plugins-off BepInEx\plugins-off /mt /z /e
+xcopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /y
 timeout /t 1 /nobreak > nul
-::ok
-::pause
-robocopy quenelle\doorstop_libs doorstop_libs /mt /z /e
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-robocopy quenelle\launcher launcher /mt /z /e 
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-robocopy quenelle\unstripped_corlib unstripped_corlib /mt /z /e 
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-robocopy quenelle\vplus-data vplus-data /mt /z /e 
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy quenelle\doorstop_config.ini doorstop_config.ini /y /f
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-robocopy quenelle\maj\cmd maj\cmd /mt /z /e 
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy quenelle\Launcher.apm Launcher.apm /y
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy quenelle\winhttp_.dll winhttp_.dll /y /f
-timeout /t 1 /nobreak > nul
-::ok
-::pause
-xcopy quenelle\Manager.apm Manager.apm /y
+robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
 ::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-::xcopy quenelle\Manager.exe Manager.exe /y /f
+xcopy maj\cmd\quenelle\bepinex\config BepInEx\config /y
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off /mt /z /e
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\doorstop_libs doorstop_libs /mt /z /e
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\launcher launcher /mt /z /e 
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\unstripped_corlib unstripped_corlib /mt /z /e 
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\vplus-data vplus-data /mt /z /e 
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+xcopy maj\cmd\quenelle\doorstop_config.ini doorstop_config.ini /y
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+robocopy maj\cmd\quenelle\maj\cmd maj\cmd /mt /z /e 
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+xcopy maj\cmd\quenelle\Launcher.apm Launcher.apm /y
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+xcopy maj\cmd\quenelle\winhttp_.dll winhttp_.dll /y
+timeout /t 1 /nobreak > nul
+::ok
+::pause
+xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 ::timeout /t 1 /nobreak > nul
+::ok
+::pause
+::xcopy maj\cmd\quenelle\Manager.exe Manager.exe /y /f
+::timeout /t 1 /nobreak > nul
+::ok
+::pause
 
-pause
-
-::RMDIR /s /q quenelle 
-
-start Suppquenelle.bat
-cd..
-cd..
-start launcher.exe
-
-exit
 
 ::---------------------------------------------------------------------
 
@@ -142,9 +133,12 @@ exit
 ::timeout /t 1 /nobreak > nul
 
 
+@echo off
+RMDIR /s /q maj\cmd\quenelle 
 
+start maj\cmd\reparerfin.bat
 
-
+exit
 
 
 
@@ -154,4 +148,4 @@ exit
 ::move /y maj\cmd\valheim\launcher.exe
 ::move /y maj\cmd\valheim\winhttp_.dll
 
-::confirme:
+
