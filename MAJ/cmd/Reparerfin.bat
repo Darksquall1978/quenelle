@@ -7,7 +7,9 @@ Color 0c & Mode con cols=50 lines=50
 ::timeout /t 2 /nobreak > nul
 
 ::launcher.exe
-start netoyage.bat
+dir
+pause
+start Netoyage.bat
 
 exit
 
