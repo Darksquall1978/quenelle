@@ -62,13 +62,13 @@ robocopy maj\cmd\quenelle\bepinex\patchers BepInEx\patchers /mt /z /e
 ::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /y
+xcopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins\ /y
 ::timeout /t 1 /nobreak > nul
 robocopy maj\cmd\quenelle\bepinex\plugins BepInEx\plugins /mt /z /e
 ::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
-xcopy maj\cmd\quenelle\bepinex\config BepInEx\config /y
+xcopy maj\cmd\quenelle\bepinex\config BepInEx\config\ /y
 ::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
