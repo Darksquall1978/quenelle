@@ -47,7 +47,8 @@ timeout /t 1 /nobreak > nul
 
 timeout /t 2 /nobreak > nul
 
-
+dir
+pause
 
 @echo off 
 robocopy maj\cmd\quenelle\.git .git /mt /z /e
