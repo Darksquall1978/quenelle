@@ -4,10 +4,7 @@ Color 1f & Mode con cols=60 lines=20
 git pull
 @echo off 
 timeout /t 1 /nobreak > nul
-
-@echo Clonage en cours....
 @echo off
-timeout /t 3 /nobreak > nul
 Clonage.bat
 exit
 
