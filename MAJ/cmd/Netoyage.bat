@@ -13,4 +13,6 @@ RMDIR /s /q bepinex\plugins
 @echo off
 RMDIR /s /q bepinex\config
 
+MAJ/cmd/reparation.bat
+
 exit
