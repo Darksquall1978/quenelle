@@ -1,16 +1,31 @@
+Color 1f & Mode con cols=75 lines=20
 @echo off
-::RMDIR /s /q maj\cmd\quenelle
+
+IF EXIST quenelle RMDIR /s /q quenelle
+timeout /t 1 /nobreak > nul
+
+batbox /c 0X04 /d  
+@echo Telechargement en cours....
 @echo off
-@echo Clonage en cours....
-@echo off
-Color 0A & Mode con cols=120 lines=100
+batbox /c 0X17 /d
+
 git clone https://github.com/Darksquall1978/quenelle.git 
-@echo Clonage terminer....
+timeout /t 1 /nobreak > nul
+
+batbox /c 0X04 /d 
+@echo Telechargement termine....
+batbox /c 0X17 /d
+
 @echo off
 timeout /t 1 /nobreak > nul
-@echo Reparation en cours....
+batbox /c 0X04 /d 
+@echo Demarrage de la reparation....
+batbox /c 0X17 /d
+
 @echo off
 timeout /t 1 /nobreak > nul
-reparation.bat
+
+start reparation.bat
+
 exit
 
