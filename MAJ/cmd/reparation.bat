@@ -137,7 +137,9 @@ xcopy maj\cmd\quenelle\Manager.apm Manager.apm /y
 
 ::RMDIR /s /q maj\cmd\quenelle 
 
-start maj\cmd\Suppquenelle.bat
+start Suppquenelle.bat
+cd..
+cd..
 start launcher.exe
 
 exit
