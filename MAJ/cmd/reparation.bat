@@ -2,8 +2,7 @@
 Color 0A & Mode con cols=120 lines=100
 git clone https://github.com/Darksquall1978/quenelle.git 
 
-dir
-pause
+
 
 @echo off
 @echo MAJ du --12/11/2022-- 14H30
@@ -42,7 +41,7 @@ timeout /t 1 /nobreak > nul
 RMDIR /s /q vplus-data
 timeout /t 1 /nobreak > nul
 
-pause
+
 
 @echo  Copie des fichiers source
 
@@ -53,8 +52,8 @@ timeout /t 2 /nobreak > nul
 @echo off 
 robocopy maj\cmd\quenelle\.git .git /mt /z /e
 timeout /t 1 /nobreak > nul
-::ok
-::pause
+ok
+pause
 robocopy maj\cmd\quenelle\bepinex\core BepInEx\core /mt /z /e
 timeout /t 1 /nobreak > nul
 ::ok
