@@ -14,6 +14,7 @@ pause
 RMDIR /s /q bepinex\config
 dir
 pause
-MAJ/cmd/reparer.bat
+cd maj\cmd
+start reparer.bat
 
 exit
