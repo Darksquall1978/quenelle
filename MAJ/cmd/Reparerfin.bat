@@ -1,16 +1,14 @@
-Color 0c & Mode con cols=25 lines=2
+Color 0c & Mode con cols=50 lines=50
 @echo Reparation ok 
 @echo off 
-timeout /t 5 /nobreak > nul
+::timeout /t 5 /nobreak > nul
 @echo off 
-@echo Redemarrage du Launcher
-timeout /t 2 /nobreak > nul
-dir 
-pause
+
+::timeout /t 2 /nobreak > nul
 
 ::launcher.exe
-start \maj\cmd\netoyage.bat
-pause
+start netoyage.bat
+
 exit
 
 
