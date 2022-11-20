@@ -22,8 +22,8 @@ RMDIR /s /q bepinex\core
 @echo  suppression du dossier patchers
 RMDIR /s /q bepinex\patchers
 ::timeout /t 1 /nobreak > nul
-@echo  suppression du dossier plugins-off
-RMDIR /s /q bepinex\plugins-off
+::@echo  suppression du dossier plugins-off
+::RMDIR /s /q bepinex\plugins-off
 ::timeout /t 1 /nobreak > nul
 @echo  suppression du dossier doorstop_libs
 RMDIR /s /q doorstop_libs
