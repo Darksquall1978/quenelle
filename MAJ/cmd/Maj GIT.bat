@@ -7,7 +7,7 @@ Color 0e & Mode con cols=100 lines=40
 
 git pull
 
-timeout /t 1 /nobreak > nul
+timeout /t 2 /nobreak > nul
 
 ::RMDIR /s /q quenelle
 
