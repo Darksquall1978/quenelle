@@ -22,7 +22,7 @@ timeout /t 3 /nobreak > nul
 ::start temp.bat
 
 
-start Launcher.exe
+start modif.bat
 
 cd..
 cd..
