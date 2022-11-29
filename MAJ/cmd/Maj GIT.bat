@@ -18,7 +18,7 @@ timeout /t 3 /nobreak > nul
 
 
 
-if exist "temp.bat"
+::if exist "temp.bat"
 start temp.bat
 
 
