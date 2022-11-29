@@ -11,7 +11,7 @@ timeout /t 1 /nobreak > nul
 
 ::RMDIR /s /q quenelle
 
-start temp.bat
+start temp.bat /MIN /B
 
 ::start modif.bat
 
