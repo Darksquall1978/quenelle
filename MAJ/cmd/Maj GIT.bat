@@ -21,7 +21,7 @@ timeout /t 3 /nobreak > nul
 ::if exist "temp.bat"
 ::start temp.bat
 
-::if not exist "temp.bat"
+
 start Launcher.exe
 
 cd..
