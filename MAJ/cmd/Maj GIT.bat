@@ -16,13 +16,14 @@ timeout /t 3 /nobreak > nul
 
 ::RMDIR /s /q quenelle
 
-start modif.bat
-::@echo Vous pouvez fermer cette fenetre
-cd..
-cd..
-::RMDIR /s /q Git
+if exist "temp.bat"
+start temp.bat
 
-::Launcher.exe 
+start modif.bat
+
+cd..
+cd..
+
 exit
 
 
