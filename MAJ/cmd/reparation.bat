@@ -72,6 +72,10 @@ xcopy maj\cmd\quenelle\bepinex\config BepInEx\config\ /y
 ::timeout /t 1 /nobreak > nul
 ::ok
 ::pause
+xcopy maj\cmd\quenelle\bepinex\config BepInEx\conf-temp\ /y
+::timeout /t 1 /nobreak > nul
+::ok
+::pause
 robocopy maj\cmd\quenelle\bepinex\plugins-off BepInEx\plugins-off /mt /z /e
 ::timeout /t 1 /nobreak > nul
 ::ok
