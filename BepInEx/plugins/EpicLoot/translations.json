@@ -36,12 +36,12 @@
  "mod_epicloot_assets_ironbountytoken_introduce": "Un petit crâne en fer qui commémore vos exploits.",
  "mod_epicloot_assets_coins": "Pièces",
 
-  "mod_epicloot_sacrifice": "Sacrifice",
-  "mod_epicloot_sacrifice_warning": "This item will be DESTROYED as a SACRIFICE to the gods.",
-  "mod_epicloot_sacrifice_explanation": "Destroy this item and get:",
-  "mod_epicloot_sacrifice_equipped": "Item is currently equipped",
-  "mod_epicloot_sacrifice_inventoryfullexplanation": "(Inventory was full when crafting)",
-  "mod_epicloot_sacrificeall": "Sacrifice All",
+ "mod_epicloot_sacrifice": "Sacrifice",
+ "mod_epicloot_sacrifice_warning": "Cet objet sera DÉTRUIT en tant que SACRIFICE aux dieux.",
+ "mod_epicloot_sacrifice_explanation": "Détruisez cet objet et obtenez:",
+ "mod_epicloot_sacrifice_equipped": "L'objet est actuellement équipé",
+ "mod_epicloot_sacrifice_inventoryfullexplanation": "(L'inventaire était plein au cours de la fabrication)",
+ "mod_epicloot_sacrificeall": "Tout sacrifier",
 
   "mod_epicloot_augment": "Augment",
   "mod_epicloot_augment_availableeffects": "Available Effects",
