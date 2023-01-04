@@ -22,7 +22,7 @@
     "Cheat sword",
     "$item_sword_fire",
     "$item_shield_iron_square"
-  ], 
+  ],
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // ITEM SETS
@@ -258,9 +258,8 @@
         { "Item": "SledgeIron",     "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] },
         { "Item": "MaceIron",       "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] },
         { "Item": "AtgeirIron",     "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] },
-        { "Item": "SpearElderbark", "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] },
-        { "Item": "BowHuntsman",    "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] }
-  ]
+        { "Item": "SpearElderbark", "Weight": 1, "Rarity": [ 38, 50, 8, 4 ] }
+      ]
     },
     {
       "Name": "Tier3Armor",
@@ -415,18 +414,11 @@
       ]
     },
     {
-      "Name": "Tier6Tools",
-      "Loot": [
-        { "Item": "PickaxeBlackmetal", "Weight": 1, "Rarity": [ 0, 10, 50, 40 ] }
-      ]
-    },
-    {
       "Name": "Tier6Everything",
       "Loot": [
         { "Item": "Tier6Weapons" },
         { "Item": "Tier6Armor"   },
-        { "Item": "Tier6Shields" },
-        { "Item": "Tier6Tools"   }
+        { "Item": "Tier6Shields" }
       ]
     }
   ],
@@ -1106,28 +1098,6 @@
       "Object": "SeekerBrute",
       "RefObject": "Tier7Mob"
     },
-    // Dvergers (Dverger, DvergerMage)
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "Dverger",
-      "RefObject": "Tier7Mob"
-    },
-    {
-      "Object": "DvergerMage",
-      "RefObject": "Tier7Mob"
-    },
-    {
-      "Object": "DvergerMageFire",
-      "RefObject": "Tier7Mob"
-    },
-    {
-      "Object": "DvergerMageIce",
-      "RefObject": "Tier7Mob"
-    },
-    {
-      "Object": "DvergerMageSupport",
-      "RefObject": "Tier7Mob"
-    },
     // Gjall (Gjall)
     ////////////////////////////////////////////////////////////////////////////////////
     {
@@ -1537,16 +1507,6 @@
     ////////////////////////////////////////////////////////////////////////////////////
     {
       "Object": "TreasureChest_mountains",
-      "Drops": [ [0, 58], [1, 30], [2, 20], [3, 2] ],
-      "Loot": [
-        { "Item": "Tier3Everything", "Weight": 4 },
-        { "Item": "Tier4Everything", "Weight": 1 }
-      ]
-    },
-    // TreasureChest_mountaincave
-    ////////////////////////////////////////////////////////////////////////////////////
-    {
-      "Object": "TreasureChest_mountaincave",
       "Drops": [ [0, 58], [1, 30], [2, 20], [3, 2] ],
       "Loot": [
         { "Item": "Tier3Everything", "Weight": 4 },

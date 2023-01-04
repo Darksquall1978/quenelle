@@ -109,7 +109,7 @@
       { "Item": "PickaxeStone",           "CoinsCost": 450  },
       { "Item": "PickaxeAntler",          "CoinsCost": 300  },
       { "Item": "PickaxeBronze",          "CoinsCost": 600  },
-      { "Item": "PickaxeIron",            "CoinsCost": 800  },
+      { "Item": "PickaxeIron",            "CoinsCost": 500  },
 
       { "Item": "SledgeStagbreaker",      "CoinsCost": 200  },
       { "Item": "SledgeIron",             "CoinsCost": 700  },
@@ -208,8 +208,7 @@
     "RefreshInterval": 7,
     "BiomeInfo": [
       { "Biome": "Meadows",     "Cost": 100, "ForestTokens": 5,  "MinRadius": 0,    "MaxRadius": 3000 },
-      { "Biome": "BlackForest", "Cost": 200, "ForestTokens": 10, "MinRadius": 500,  "MaxRadius": 6000 },
-      { "Biome": "Ocean",       "Cost": -1,  "ForestTokens": 0,  "MinRadius": 500,  "MaxRadius": 8000 },
+      { "Biome": "BlackForest", "Cost": 200, "ForestTokens": 10, "MinRadius": 0,    "MaxRadius": 6000 },
       { "Biome": "Swamp",       "Cost": 300, "ForestTokens": 15, "MinRadius": 2000, "MaxRadius": 6000 },
       { "Biome": "Mountain",    "Cost": 400, "ForestTokens": 20, "MinRadius": 2000, "MaxRadius": 6000 },
       { "Biome": "Plains",      "Cost": 500, "ForestTokens": 25, "MinRadius": 3000, "MaxRadius": 6000 },
@@ -218,7 +217,7 @@
     "StartRadiusMin": 0,
     "StartRadiusMax": 500,
     "IncreaseRadiusCount": 3,
-    "RadiusInterval": 100,
+    "RadiusInterval": 500,
     "MinimapAreaRadius": 60,
     "SaleItems": [
       { "Item": "RunestoneMagic",     "ForestTokenCost": 5 },
@@ -274,15 +273,15 @@
       { "Biome": "Mountain",    "TargetID": "Fenring",          "RewardGold": 2, "RewardIron": 5, "RewardCoins": 400, "Adds": [ { "ID": "Wolf",         "Count": 3 }  ] },
       { "Biome": "Mountain",    "TargetID": "StoneGolem",       "RewardGold": 2, "RewardIron": 0, "RewardCoins": 380  },
       { "Biome": "Mountain",    "TargetID": "StoneGolem",       "RewardGold": 3, "RewardIron": 7, "RewardCoins": 450, "Adds": [ { "ID": "StoneGolem",   "Count": 2 }  ] },
-      { "Biome": "Mountain",    "TargetID": "Fenring_Cultist",  "RewardGold": 3, "RewardIron": 5, "RewardCoins": 350, "Adds": [ { "ID": "Fenring_Cultist","Count": 2 }  ] },
-      { "Biome": "Mountain",    "TargetID": "Fenring_Cultist",  "RewardGold": 3, "RewardIron": 3, "RewardCoins": 350, "Adds": [ { "ID": "Ulv",          "Count": 2 }  ] },
+      { "Biome": "Mountain",    "TargetID": "Cultist",          "RewardGold": 3, "RewardIron": 5, "RewardCoins": 350, "Adds": [ { "ID": "Cultist",      "Count": 2 }  ] },
+      { "Biome": "Mountain",    "TargetID": "Cultist",          "RewardGold": 3, "RewardIron": 3, "RewardCoins": 350, "Adds": [ { "ID": "Ulv",          "Count": 2 }  ] },
 
       { "Biome": "Plains",      "TargetID": "Goblin",           "RewardGold": 0, "RewardIron": 5, "RewardCoins": 450  },
       { "Biome": "Plains",      "TargetID": "Goblin",           "RewardGold": 0, "RewardIron": 5, "RewardCoins": 450  },
       { "Biome": "Plains",      "TargetID": "Goblin",           "RewardGold": 0, "RewardIron": 5, "RewardCoins": 450  },
       { "Biome": "Plains",      "TargetID": "Lox",              "RewardGold": 0, "RewardIron": 5, "RewardCoins": 480  },
-      { "Biome": "Plains",      "TargetID": "BlobTar",          "RewardGold": 0, "RewardIron": 5, "RewardCoins": 480  },
-      { "Biome": "Plains",      "TargetID": "BlobTar",          "RewardGold": 1, "RewardIron": 4, "RewardCoins": 580, "Adds": [ { "ID": "BlobTar",      "Count": 2 }  ] },
+      { "Biome": "Plains",      "TargetID": "Growth",           "RewardGold": 1, "RewardIron": 5, "RewardCoins": 480  },
+      { "Biome": "Plains",      "TargetID": "Growth",           "RewardGold": 1, "RewardIron": 5, "RewardCoins": 580, "Adds": [ { "ID": "Growth",       "Count": 2 }  ] },
       { "Biome": "Plains",      "TargetID": "Deathsquito",      "RewardGold": 0, "RewardIron": 5, "RewardCoins": 435  },
       { "Biome": "Plains",      "TargetID": "Deathsquito",      "RewardGold": 0, "RewardIron": 5, "RewardCoins": 435  },
       { "Biome": "Plains",      "TargetID": "Deathsquito",      "RewardGold": 3, "RewardIron": 8, "RewardCoins": 450, "Adds": [ { "ID": "Deathsquito",  "Count": 2 }  ] },
@@ -299,16 +298,6 @@
       { "Biome": "Mistlands",   "TargetID": "SeekerBrute",      "RewardGold": 4, "RewardIron": 7, "RewardCoins": 1750,"Adds": [ { "ID": "Seeker",       "Count": 2  } ] },
       { "Biome": "Mistlands",   "TargetID": "Seeker",           "RewardGold": 4, "RewardIron": 7, "RewardCoins": 1750,"Adds": [ { "ID": "SeekerBrood",  "Count": 10 } ] },
       { "Biome": "Mistlands",   "TargetID": "Gjall",            "RewardGold": 5, "RewardIron": 0, "RewardCoins": 1800 }
-    ],
-    // To configure custom bosses, order them in the order of progression desired. 
-    "Bosses": [
-      {"Biome": "Meadows",		  "BossPrefab": "Eikthyr",		  "BossDefeatedKey": "defeated_eikthyr" },
-      {"Biome": "BlackForest",	"BossPrefab": "gd_king",		  "BossDefeatedKey": "defeated_gdking" },
-      {"Biome": "Ocean",			  "BossPrefab": "gd_king",		  "BossDefeatedKey": "defeated_gdking" }, 
-      {"Biome": "Swamp", 			  "BossPrefab": "Bonemass",		  "BossDefeatedKey": "defeated_bonemass" },
-      {"Biome": "Mountain", 		"BossPrefab": "Dragon",			  "BossDefeatedKey": "defeated_dragon" },
-      {"Biome": "Plains", 		  "BossPrefab": "GoblinKing",		"BossDefeatedKey": "defeated_goblinking" },
-      {"Biome": "Mistlands", 		"BossPrefab": "SeekerQueen",	"BossDefeatedKey": "defeated_queen" }
     ],
     "Names": {
       "ChanceForSpecialName": 0.01,
