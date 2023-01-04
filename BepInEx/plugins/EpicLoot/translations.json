@@ -1156,12 +1156,12 @@
  "mod_epicloot_l_ragnarlegs": "Côte de fer de Ragnar",
  "mod_epicloot_l_ragnarlegs_desc": "Allez de l'avant, et massacrez vos ennemis à l'aide de vos Côtes de fer.",
 
-  "mod_epicloot_set_heimdall": "Heimdall's Legacy",
-  "mod_epicloot_set_ragnar": "Ragnar's Fury",
+  "mod_epicloot_set_heimdall": "Héritage d'Heimdall",
+ "mod_epicloot_set_ragnar": "Fureur de Ragnar",
 
-  "mod_epicloot_magic": "Magic",
-  "mod_epicloot_rare": "Rare",
-  "mod_epicloot_epic": "Epic",
-  "mod_epicloot_legendary": "Legendary",
-  "mod_epicloot_legendarysetlabel": "Legendary Set Item"
+ "mod_epicloot_magic": "Magique",
+ "mod_epicloot_rare": "Rare",
+ "mod_epicloot_epic": "Épique",
+ "mod_epicloot_legendary": "Légendaire",
+ "mod_epicloot_legendarysetlabel": "Objet d'ensemble légendaire",
 }
