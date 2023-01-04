@@ -43,12 +43,12 @@
  "mod_epicloot_sacrifice_inventoryfullexplanation": "(L'inventaire était plein au cours de la fabrication)",
  "mod_epicloot_sacrificeall": "Tout sacrifier",
 
-  "mod_epicloot_augment": "Augment",
-  "mod_epicloot_augment_availableeffects": "Available Effects",
-  "mod_epicloot_augment_explain": "Replace one magical effect. Once an effect has been augmented, the others are locked.",
-  "mod_epicloot_augment_keep": "keep",
-  "mod_epicloot_augment_noeffects": "No available effects",
-  "mod_epicloot_augment_selecteffect": "Select an effect to augment",
+  "mod_epicloot_augment": "Améliorer",
+ "mod_epicloot_augment_availableeffects": "Effets disponibles",
+ "mod_epicloot_augment_explain": "Remplace un effet magique. Une fois qu'un effet a été amélioré, les autres sont verrouillés.",
+ "mod_epicloot_augment_keep": "garder",
+ "mod_epicloot_augment_noeffects": "Pas d'effet disponible",
+ "mod_epicloot_augment_selecteffect": "Sélectionnez un effet à améliorer",
   "mod_epicloot_augment_deprecated": "This effect is a deprecated effect. The augment is free, but you will not be able to keep the effect.",
 
   "mod_epicloot_enchant": "Enchant",
