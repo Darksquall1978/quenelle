@@ -4,6 +4,7 @@
       "Type" : "DvergerCirclet",
       "DisplayText" : "$mod_epicloot_me_dvergercirclet_display",
       "CanBeAugmented": false, 
+      "CanBeDisenchanted": false, 
       "Requirements" : {
         "NoRoll": true
       },
@@ -13,6 +14,7 @@
       "Type" : "Megingjord",
       "DisplayText" : "$mod_epicloot_me_megingjord_display",
       "CanBeAugmented": false, 
+      "CanBeDisenchanted": false, 
       "Requirements" : {
         "NoRoll": true
       },
@@ -22,6 +24,7 @@
       "Type" : "Wishbone",
       "DisplayText" : "$mod_epicloot_me_wishbone_display",
       "CanBeAugmented": false, 
+      "CanBeDisenchanted": false, 
       "Requirements" : {
         "NoRoll": true
       },
@@ -31,6 +34,7 @@
       "Type": "Andvaranaut",
       "DisplayText" : "$mod_epicloot_me_andvaranaut_display",
       "CanBeAugmented": false, 
+      "CanBeDisenchanted": false, 
       "Requirements" : {
         "NoRoll": true
       },
@@ -2144,7 +2148,8 @@
       "Description" : "$mod_epicloot_me_freebuild_desc",
       "Requirements" : {
         "AllowedItemNames" : [
-          "$item_hammer"
+          "$item_hammer",
+          "$item_hoe"
         ],
         "AllowedRarities" : [
           "Legendary"
@@ -2856,6 +2861,51 @@
       ],
       "Suffixes": [
         "$mod_epicloot_me_slow_suffix1"
+      ]
+    },
+    {
+      "Type" : "DoubleMagicShot",
+      "DisplayText" : "$mod_epicloot_me_doublemagicshot",
+      "Description" : "$mod_epicloot_me_doublemagicshot_desc",
+      "Requirements" : {
+        "AllowedItemTypes" : [
+          "Staff"
+        ],
+        "AllowedSkillTypes" : [
+          "ElementalMagic"
+        ],
+        "AllowedRarities" : [
+          "Epic",
+          "Legendary"
+        ]
+      },
+      "SelectionWeight" : 1,
+      "Prefixes": [
+        "$mod_epicloot_me_doublemagicshot_prefix1"
+      ],
+      "Suffixes": [
+        "$mod_epicloot_me_doublemagicshot_suffix1"
+      ]
+    },
+    {
+      "Type" : "TripleBowShot",
+      "DisplayText" : "$mod_epicloot_me_triplebowshot",
+      "Description" : "$mod_epicloot_me_triplebowshot_desc",
+      "Requirements" : {
+        "AllowedItemTypes" : [
+          "Bow"
+        ],
+        "AllowedRarities" : [
+          "Epic",
+          "Legendary"
+        ]
+      },
+      "SelectionWeight" : 1,
+      "Prefixes": [
+        "$mod_epicloot_me_triplebowshot_prefix1"
+      ],
+      "Suffixes": [
+        "$mod_epicloot_me_triplebowshot_suffix1"
       ]
     },
 
