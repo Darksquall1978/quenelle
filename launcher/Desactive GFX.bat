@@ -1,4 +1,11 @@
-@echo
+@Echo off
+mode con cols=38 lines=2
+Title GFX on
+Color 0a
+@echo GFX desactive
+@Echo off
+timeout /t 4 /nobreak > nul
+@echo 
 cd..
 cd valheim_Data/ 
 if exist boot.config del boot.config

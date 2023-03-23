@@ -1,3 +1,11 @@
+@Echo off
+mode con cols=38 lines=3
+Title GFX on
+Color 0a
+@echo gfx-enable-gfx-jobs=1
+@echo gfx-enable-native-gfx-jobs=1
+@Echo off
+timeout /t 4 /nobreak > nul
 @echo 
 cd..
 cd valheim_Data/
