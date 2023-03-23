@@ -1,0 +1,8 @@
+@echo
+cd..
+cd valheim_Data/ 
+if exist boot.config del boot.config
+echo.>>boot.config
+echo wait-for-native-debugger=0 >> boot.config
+echo hdr-display-enabled=0 >> boot.config
+echo gc-max-time-slice=3 >> boot.config
