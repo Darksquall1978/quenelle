@@ -295,7 +295,7 @@
         </member>
         <member name="P:Jotunn.Configs.CookingConversionConfig.Station">
             <summary>
-                The name of the station prefab this conversion is added to. Defaults to "piece_cookingstation".
+                The name of the station prefab this conversion is added to. Defaults to <see cref="P:Jotunn.Configs.CookingStations.CookingStation"/>.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.CookingConversionConfig.CookTime">
@@ -322,6 +322,127 @@
             </summary>
             <param name="json">JSON text</param>
             <returns>Loaded list of CookingConversionConfigs</returns>
+        </member>
+        <member name="T:Jotunn.Configs.CookingStations">
+            <summary>
+                Helper to get existing cooking station names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CookingStations.CookingStation">
+            <summary>
+                Cooking station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CookingStations.IronCookingStation">
+            <summary>
+                Iron cooking station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CookingStations.StoneOven">
+            <summary>
+                Stone oven cooking station
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.CookingStations.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.CookingStations.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all cooking station names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid cooking stations can be selected.<br/><br/>
+                Example:
+                <code>
+                    var stationConfig = Config.Bind("Section", "Key", nameof(CookingStations.CookingStation), new ConfigDescription("Description", CookingStations.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.CookingStations.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a cooking station from its human readable name.
+            </summary>
+            <param name="cookingStation"></param>
+            <returns>
+                The matched internal name.
+                If the cookingStation parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged cookingStation parameter is returned.
+            </returns>
+        </member>
+        <member name="T:Jotunn.Configs.CraftingStations">
+            <summary>
+                Helper to get existing crafting station names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.None">
+            <summary>
+                No crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.Workbench">
+            <summary>
+               Workbench crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.Forge">
+            <summary>
+               Forge crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.Stonecutter">
+            <summary>
+                Stonecutter crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.Cauldron">
+            <summary>
+                Cauldron crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.ArtisanTable">
+            <summary>
+                Artisan table crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.BlackForge">
+            <summary>
+                Black forge crafting station
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.CraftingStations.GaldrTable">
+            <summary>
+                Galdr table crafting station
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.CraftingStations.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.CraftingStations.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all crafting station names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid crafting stations can be selected.<br/><br/>
+                Example:
+                <code>
+                    var stationConfig = Config.Bind("Section", "Key", nameof(CraftingStations.Workbench), new ConfigDescription("Description", CraftingStations.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.CraftingStations.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a crafting station from its human readable name.
+            </summary>
+            <param name="craftingStation"></param>
+            <returns>
+                The matched internal name.
+                If the craftingStation parameter is null or empty, <see cref="P:Jotunn.Configs.CraftingStations.None"/> is returned.
+                Otherwise the unchanged craftingStation parameter is returned.
+            </returns>
         </member>
         <member name="T:Jotunn.Configs.CreatureConfig">
             <summary>
@@ -461,7 +582,7 @@
         </member>
         <member name="P:Jotunn.Configs.FermenterConversionConfig.Station">
             <summary>
-                The name of the station prefab this conversion is added to. Defaults to "fermenter".
+                The name of the station prefab this conversion is added to. Defaults to <see cref="P:Jotunn.Configs.Fermenters.Fermenter"/>.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.FermenterConversionConfig.ProducedItems">
@@ -489,6 +610,44 @@
             <param name="json">JSON text</param>
             <returns>Loaded list of FermenterConversionConfigs</returns>
         </member>
+        <member name="T:Jotunn.Configs.Fermenters">
+            <summary>
+                Helper to get existing fermenter names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Fermenters.Fermenter">
+            <summary>
+                Fermenter
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.Fermenters.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Fermenters.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all fermenter names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid fermenter can be selected.<br/><br/>
+                Example:
+                <code>
+                    var fermenterConfig = Config.Bind("Section", "Key", nameof(Fermenters.Fermenter), new ConfigDescription("Description", Fermenters.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Fermenters.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a fermenter from its human readable name.
+            </summary>
+            <param name="fermenter"></param>
+            <returns>
+                The matched internal name.
+                If the fermenter parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged fermenter parameter is returned.
+            </returns>
+        </member>
         <member name="T:Jotunn.Configs.IncineratorConversionConfig">
             <summary>
                 Used to add new IncineratorConversions to the Incinerator
@@ -496,7 +655,7 @@
         </member>
         <member name="P:Jotunn.Configs.IncineratorConversionConfig.Station">
             <summary>
-                The name of the station prefab this conversion is added to. Defaults to "incinerator".
+                The name of the station prefab this conversion is added to. Defaults to <see cref="P:Jotunn.Configs.Incinerators.Incinerator"/>.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.IncineratorConversionConfig.Requirements">
@@ -575,6 +734,44 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Jotunn.Configs.Incinerators">
+            <summary>
+                Helper to get existing incinerator names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Incinerators.Incinerator">
+            <summary>
+                Incinerator
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.Incinerators.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Incinerators.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all incinerator names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid incinerator can be selected.<br/><br/>
+                Example:
+                <code>
+                    var incineratorConfig = Config.Bind("Section", "Key", nameof(Incinerators.Incinerator), new ConfigDescription("Description", Incinerators.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Incinerators.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a incinerator from its human readable name.
+            </summary>
+            <param name="incinerator"></param>
+            <returns>
+                The matched internal name.
+                If the incinerator parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged incinerator parameter is returned.
+            </returns>
+        </member>
         <member name="T:Jotunn.Configs.ItemConfig">
             <summary>
                 Configuration class for adding custom items. Automatically creates a recipe for this item.<br />
@@ -627,6 +824,16 @@
         <member name="P:Jotunn.Configs.ItemConfig.MinStationLevel">
             <summary>
                 The minimum required level for the crafting station. Defaults to <c>1</c>.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.ItemConfig.RequireOnlyOneIngredient">
+            <summary>
+                Whether this recipe requires only one of the crafting requirements to be crafted. Defaults to <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.ItemConfig.QualityResultAmountMultiplier">
+            <summary>
+                Multiplier for the amount of items created by the recipe based on the quality of the crafting materials. Defaults to <c>1</c>.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.ItemConfig.Icons">
@@ -983,6 +1190,64 @@
             </summary>
             <returns>The Valheim <see cref="T:ZoneSystem.ZoneLocation"/></returns>
         </member>
+        <member name="T:Jotunn.Configs.PieceCategories">
+            <summary>
+                Helper to get existing piece category names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceCategories.Misc">
+            <summary>
+                Piece 'Misc' category
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceCategories.Crafting">
+            <summary>
+                Piece 'Crafting' category
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceCategories.Building">
+            <summary>
+                Piece 'Building' category
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceCategories.Furniture">
+            <summary>
+                Piece 'Furniture' category
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceCategories.All">
+            <summary>
+                All piece categories
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.PieceCategories.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.PieceCategories.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all piece category names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid piece category can be selected.<br/><br/>
+                Example:
+                <code>
+                    var pieceCategoryConfig = Config.Bind("Section", "Key", nameof(PieceCategories.Building), new ConfigDescription("Description", PieceCategories.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.PieceCategories.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a piece category from its human readable name.
+            </summary>
+            <param name="pieceCategory"></param>
+            <returns>
+                The matched internal name.
+                If the pieceCategory parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged pieceCategory parameter is returned.
+            </returns>
+        </member>
         <member name="T:Jotunn.Configs.PieceConfig">
             <summary>
                 Configuration class for adding custom pieces.<br />
@@ -1116,6 +1381,54 @@
             </summary>
             <param name="prefab"></param>
         </member>
+        <member name="T:Jotunn.Configs.PieceTables">
+            <summary>
+               Helper to get existing piece table names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceTables.Hammer">
+            <summary>
+                Hammer piece table
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceTables.Cultivator">
+            <summary>
+                Cultivator piece table
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.PieceTables.Hoe">
+            <summary>
+                Hoe piece table
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.PieceTables.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.PieceTables.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all piece table names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid piece table can be selected.<br/><br/>
+                Example:
+                <code>
+                     var pieceTableConfig = Config.Bind("Section", "Key", nameof(PieceTables.Hammer), new ConfigDescription("Description", PieceTables.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.PieceTables.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a piece table from its human readable name.
+            </summary>
+            <param name="pieceTable"></param>
+            <returns>
+                The matched internal name.
+                If the pieceTable parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged pieceTable parameter is returned.
+            </returns>
+        </member>
         <member name="T:Jotunn.Configs.RecipeConfig">
             <summary>
                 Configuration class for adding custom recipes.
@@ -1158,6 +1471,16 @@
         <member name="P:Jotunn.Configs.RecipeConfig.MinStationLevel">
             <summary>
                 The minimum required level for the crafting station. Defaults to <c>1</c>.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.RecipeConfig.RequireOnlyOneIngredient">
+            <summary>
+                Whether this recipe requires only one of the crafting requirements to be crafted. Defaults to <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.RecipeConfig.QualityResultAmountMultiplier">
+            <summary>
+                Multiplier for the amount of items created by the recipe based on the quality of the crafting materials. Defaults to <c>1</c>.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.RecipeConfig.Requirements">
@@ -1357,7 +1680,7 @@
         </member>
         <member name="P:Jotunn.Configs.SmelterConversionConfig.Station">
             <summary>
-                The name of the station prefab this conversion is added to. Defaults to "smelter".
+                The name of the station prefab this conversion is added to. Defaults to <see cref="P:Jotunn.Configs.Smelters.Smelter"/>.
             </summary>
         </member>
         <member name="M:Jotunn.Configs.SmelterConversionConfig.GetItemConversion">
@@ -1379,6 +1702,74 @@
             </summary>
             <param name="json">JSON text</param>
             <returns>Loaded list of SmelterConversionConfigs</returns>
+        </member>
+        <member name="T:Jotunn.Configs.Smelters">
+            <summary>
+                Helper to get existing smelter names
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.Smelter">
+            <summary>
+                Smelter
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.BlastFurnace">
+            <summary>
+                Blast furnace
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.CharcoalKiln">
+            <summary>
+                Charcoal kiln
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.EitrRefinery">
+            <summary>
+                Eitr refinery
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.Bathtub">
+            <summary>
+                Bathtub
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.SpinningWheel">
+            <summary>
+                Spinning wheel
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.Smelters.Windmill">
+            <summary>
+                Windmill
+            </summary>
+        </member>
+        <member name="M:Jotunn.Configs.Smelters.GetNames">
+            <summary>
+                Gets the human readable name to internal names map
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Smelters.GetAcceptableValueList">
+            <summary>
+                Get a <see cref="T:BepInEx.Configuration.AcceptableValueList`1"/> of all smelter names.
+                This can be used to create a <see cref="T:BepInEx.Configuration.ConfigEntry`1"/> where only valid smelter can be selected.<br/><br/>
+                Example:
+                <code>
+                    var smelterConfig = Config.Bind("Section", "Key", nameof(Smelters.Smelter), new ConfigDescription("Description", Smelters.GetAcceptableValueList()));
+                </code>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Configs.Smelters.GetInternalName(System.String)">
+            <summary>
+                Get the internal name for a smelter from its human readable name.
+            </summary>
+            <param name="smelter"></param>
+            <returns>
+                The matched internal name.
+                If the smelter parameter is null or empty, an empty string is returned.
+                Otherwise the unchanged smelter parameter is returned.
+            </returns>
         </member>
         <member name="T:Jotunn.Configs.SpawnConfig">
             <summary>
@@ -1777,6 +2168,12 @@
             <param name="fixReference">If true references for <see cref="T:Jotunn.Entities.Mock`1"/> objects get resolved at runtime by Jötunn.</param>
             <param name="config">The <see cref="T:Jotunn.Configs.ClutterConfig"/> for this custom clutter.</param>
         </member>
+        <member name="M:Jotunn.Entities.CustomClutter.IsValid">
+            <summary>
+                Checks if a custom clutter is valid (i.e. has a prefab).
+            </summary>
+            <returns>true if all criteria is met</returns>
+        </member>
         <member name="M:Jotunn.Entities.CustomClutter.ToString">
             <inheritdoc/>
         </member>
@@ -1836,6 +2233,16 @@
             <param name="basePrefabName">The name of the base prefab the custom creature is cloned from.</param>
             <param name="creatureConfig">The <see cref="T:Jotunn.Configs.CreatureConfig"/> for this custom creature.</param>
         </member>
+        <member name="M:Jotunn.Entities.CustomCreature.#ctor(UnityEngine.AssetBundle,System.String,System.Boolean,Jotunn.Configs.CreatureConfig)">
+            <summary>
+                Custom creature from a prefab loaded from an <see cref="T:UnityEngine.AssetBundle"/> with a <see cref="T:Jotunn.Configs.PieceConfig"/> attached.<br />
+                The members and references from the <see cref="T:Jotunn.Configs.PieceConfig"/> will be referenced by Jötunn at runtime.
+            </summary>
+            <param name="assetBundle">A preloaded <see cref="T:UnityEngine.AssetBundle"/></param>
+            <param name="assetName">Name of the prefab in the bundle.</param>
+            <param name="fixReference">If true references for <see cref="T:Jotunn.Entities.Mock`1"/> objects get resolved at runtime by Jötunn.</param>
+            <param name="creatureConfig">The <see cref="T:Jotunn.Configs.CreatureConfig"/> for this custom creature.</param>
+        </member>
         <member name="M:Jotunn.Entities.CustomCreature.IsValid">
             <summary>
                 Checks if a custom creature is valid (i.e. has a prefab and all required components).
@@ -1878,6 +2285,13 @@
                 ctor with manual assigned SourceMod
             </summary>
             <param name="sourceMod">Metadata of the mod adding this entity</param>
+        </member>
+        <member name="M:Jotunn.Entities.CustomEntity.#ctor(System.Reflection.Assembly)">
+            <summary>
+                ctor with passed calling assembly.
+                If the calling is no BepInEx plugin or Jotunn itself, the SourceMod will be searched via reflection
+            </summary>
+            <param name="callingAssembly"></param>
         </member>
         <member name="T:Jotunn.Entities.CustomItem">
             <summary>
@@ -2077,10 +2491,14 @@
             <summary> Map that work as [language][token] = translation. </summary>
         </member>
         <member name="M:Jotunn.Entities.CustomLocalization.#ctor">
-            <summary> Default constuctor. </summary>
+            <summary>
+                Default constructor.
+            </summary>
         </member>
         <member name="M:Jotunn.Entities.CustomLocalization.#ctor(BepInEx.BepInPlugin)">
-            <summary> SourceMod hint constuctor. </summary>
+            <summary>
+                SourceMod hint constructor.
+            </summary>
             <param name="sourceMod"> Mod data in the shape of BepInPlugin class. </param>
         </member>
         <member name="M:Jotunn.Entities.CustomLocalization.GetLanguages">
@@ -2247,6 +2665,12 @@
         <member name="P:Jotunn.Entities.CustomPiece.PieceTable">
             <summary>
                 Name of the <see cref="T:PieceTable"/> this custom piece belongs to.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Entities.CustomPiece.Category">
+            <summary>
+                Name of the category this custom piece belongs to.<br />
+                When setting this value, Piece.m_category will be updated as well.
             </summary>
         </member>
         <member name="P:Jotunn.Entities.CustomPiece.FixReference">
@@ -2774,6 +3198,12 @@
             <param name="prefabName">Name of the prefab to test.</param>
             <returns>true if the prefab is added as a custom vegetation to the <see cref="T:Jotunn.Managers.ZoneManager"/>.</returns>
         </member>
+        <member name="M:Jotunn.Entities.CustomVegetation.IsValid">
+            <summary>
+                Checks if a custom vegetation is valid (i.e. has a prefab, an <see cref="T:ItemDrop"/> and an icon, if it should be craftable).
+            </summary>
+            <returns>true if all criteria is met</returns>
+        </member>
         <member name="M:Jotunn.Entities.CustomVegetation.ToString">
             <inheritdoc/>
         </member>
@@ -2975,6 +3405,57 @@
             <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.HasAnyComponent(UnityEngine.GameObject,System.Type[])">
+            <summary>
+                Check if GameObject has any of the specified components.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="components"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.HasAnyComponent(UnityEngine.GameObject,System.String[])">
+            <summary>
+                Check if GameObject has any of the specified components.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="componentNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.HasAllComponents(UnityEngine.GameObject,System.String[])">
+            <summary>
+                Check if GameObject has all of the specified components.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="componentNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.HasAllComponents(UnityEngine.GameObject,System.Type[])">
+            <summary>
+                Check if GameObject has all of the specified components.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="components"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.HasAnyComponentInChildren(UnityEngine.GameObject,System.Boolean,System.Type[])">
+            <summary>
+                Check if GameObject or any of it's children
+                have any of the specified components.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="includeInactive"></param>
+            <param name="components"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.FindDeepChild(UnityEngine.GameObject,System.String,Utils.IterativeSearchType)">
+            <summary>
+                Extension method to find nested children by name using either
+                a breadth-first or depth-first search. Default is breadth-first.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="childName">Name of the child object to search for.</param>
+            <param name="searchType">Whether to preform a breadth first or depth first search. Default is breadth first.</param>
+        </member>
         <member name="T:Jotunn.GameObjectGUIExtension">
             <summary>
                 Use only, if you know what you do.
@@ -3126,6 +3607,75 @@
             <param name="rectTransform"></param>
             <returns></returns>
         </member>
+        <member name="T:Jotunn.Extensions.StringExtensions">
+            <summary>
+                Helper methods for strings
+            </summary>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.ContainsAny(System.String,System.String[])">
+            <summary>
+                Returns true if the string contains any of the substrings.
+            </summary>
+            <param name="str"></param>
+            <param name="substrings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.EndsWithAny(System.String,System.String[])">
+            <summary>
+                Returns true if the string ends with any one of the suffixes.
+            </summary>
+            <param name="str"></param>
+            <param name="suffixes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.StartsWithAny(System.String,System.String[])">
+            <summary>
+                Returns true if the string starts with any one of the prefixes.
+            </summary>
+            <param name="str"></param>
+            <param name="prefixes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.RemoveSuffix(System.String,System.String)">
+            <summary>
+                If the string ends with the suffix then return a copy of the string
+                with the suffix stripped, otherwise return the original string.
+            </summary>
+            <param name="s"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.RemovePrefix(System.String,System.String)">
+            <summary>
+                If the string starts with the prefix then return a copy of the string
+                with the prefix stripped, otherwise return the original string.
+            </summary>
+            <param name="s"></param>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Extensions.StringExtensions.CapitalizeFirstLetter(System.String)">
+            <summary>
+                Returns a copy of the string with the first character capitalized
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jotunn.Extensions.TransformExtensions">
+            <summary>
+                Convenience methods for Transforms
+            </summary>
+        </member>
+        <member name="M:Jotunn.Extensions.TransformExtensions.FindDeepChild(UnityEngine.Transform,System.String,Utils.IterativeSearchType)">
+            <summary>
+                Extension method to find nested children by name using either
+                a breadth-first or depth-first search. Default is breadth-first.
+            </summary>
+            <param name="transform"></param>
+            <param name="childName">Name of the child object to search for.</param>
+            <param name="searchType">Whether to preform a breadth first or depth first search. Default is breadth first.</param>
+            <returns></returns>
+        </member>
         <member name="T:Jotunn.ZNetExtension">
             <summary>
                 Extends ZNet with a clear diversion between local, client and server instances.
@@ -3206,11 +3756,6 @@
         <member name="F:Jotunn.Logger.ShowDate">
             <summary>
                 Add DateTime to the log output
-            </summary>
-        </member>
-        <member name="M:Jotunn.Logger.Init">
-            <summary>
-                Singleton init
             </summary>
         </member>
         <member name="M:Jotunn.Logger.Destroy">
@@ -3328,11 +3873,6 @@
                 The BepInEx plugin Mod GUID being used (com.jotunn.jotunn).
             </summary>
         </member>
-        <member name="M:Jotunn.Main.InitializePatches">
-            <summary>
-                Invoke patch initialization methods for all loaded mods.
-            </summary>
-        </member>
         <member name="T:Jotunn.Managers.CommandManager">
             <summary>
                 Manager for handling custom console and chat commands.
@@ -3359,7 +3899,7 @@
                 either by Jotunn or by mods using Jotunn.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.CommandManager.Init">
+        <member name="M:Jotunn.Managers.CommandManager.Jotunn#IManager#Init">
             <summary>
                 Initialize console commands that come with Jotunn.
             </summary>
@@ -3428,7 +3968,7 @@
                 Reference to the SpawnList component of the container.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.CreatureManager.Init">
+        <member name="M:Jotunn.Managers.CreatureManager.Jotunn#IManager#Init">
             <summary>
                 Creates the spawner container and registers all hooks.
             </summary>
@@ -3621,11 +4161,6 @@
                 Indicates if the PixelFix must be created for the start or main scene.
             </summary>
         </member>
-        <member name="F:Jotunn.Managers.GUIManager.Headless">
-            <summary>
-                Cache headless state
-            </summary>
-        </member>
         <member name="M:Jotunn.Managers.GUIManager.IsHeadless">
             <summary>
                 Detect headless mode (aka dedicated server)
@@ -3658,17 +4193,22 @@
                 Reset the InputBlock to its initial state (disabled)
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.GUIManager.Init">
+        <member name="M:Jotunn.Managers.GUIManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.GUIManager.InitialLoad(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)">
+        <member name="M:Jotunn.Managers.GUIManager.BlockUseTranspiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction})">
+            <summary>
+                Prevents hiding the InventoryGui on an E press or similar when the GUIManager blocks the input
+            </summary>
+            <param name="instructions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Managers.GUIManager.InitializeAssets">
             <summary>
                 Load GUI assets on first start
             </summary>
-            <param name="scene"></param>
-            <param name="loadMode"></param>
         </member>
         <member name="M:Jotunn.Managers.GUIManager.CreateCustomGUI(UnityEngine.Transform)">
             <summary>
@@ -4034,17 +4574,22 @@
         </member>
         <member name="M:Jotunn.Managers.InputManager.GetGamepadKeyCode(Jotunn.Managers.InputManager.GamepadButton)">
             <summary>
-                Translate a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its <see cref="T:UnityEngine.KeyCode"/> value
+                Translates a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its <see cref="T:UnityEngine.KeyCode"/> value
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.InputManager.GetGamepadAxis(Jotunn.Managers.InputManager.GamepadButton)">
+        <member name="M:Jotunn.Managers.InputManager.GetGamepadInput(Jotunn.Managers.InputManager.GamepadButton)">
             <summary>
                 Translate a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its axis string value
             </summary>
         </member>
         <member name="M:Jotunn.Managers.InputManager.GetGamepadString(Jotunn.Managers.InputManager.GamepadButton)">
             <summary>
-                Translate a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its printable string value
+                Translates a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its printable string value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Managers.InputManager.GetGamepadButton(GamepadInput)">
+            <summary>
+                Translates an axis string to its <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> value
             </summary>
         </member>
         <member name="M:Jotunn.Managers.InputManager.GetGamepadButton(System.String)">
@@ -4067,7 +4612,7 @@
                 Hide .ctor
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.InputManager.Init">
+        <member name="M:Jotunn.Managers.InputManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
@@ -4121,7 +4666,7 @@
                 If you want to execute just once you will need to unregister from the event after execution.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.ItemManager.Init">
+        <member name="M:Jotunn.Managers.ItemManager.Jotunn#IManager#Init">
             <summary>
                 Registers all hooks.
             </summary>
@@ -4328,7 +4873,7 @@
                 Base GameObjects of vanilla key hint parts
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.KeyHintManager.Init">
+        <member name="M:Jotunn.Managers.KeyHintManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
@@ -4395,7 +4940,7 @@
                 Internal list of objects to which Kitbashing should be applied.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.KitbashManager.Init">
+        <member name="M:Jotunn.Managers.KitbashManager.Jotunn#IManager#Init">
             <summary>
                 Registers all hooks.
             </summary>
@@ -4488,7 +5033,7 @@
                 Call into unity's DoQuoteLineSplit.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.LocalizationManager.Init">
+        <member name="M:Jotunn.Managers.LocalizationManager.Jotunn#IManager#Init">
             <summary>
                 Initialize localization manager.
             </summary>
@@ -4622,7 +5167,7 @@
                 Container to hold all live Drawings.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.MinimapManager.Init">
+        <member name="M:Jotunn.Managers.MinimapManager.Jotunn#IManager#Init">
             <summary>
                 Creates the Overlays and registers hooks.
             </summary>
@@ -4874,7 +5419,7 @@
                 Internal container for mocked prefabs
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.MockManager.Init">
+        <member name="M:Jotunn.Managers.MockManager.Jotunn#IManager#Init">
             <summary>
                 Creates the container and registers all hooks
             </summary>
@@ -4983,7 +5528,7 @@
                 Internal list of registered RPCs
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.NetworkManager.Init">
+        <member name="M:Jotunn.Managers.NetworkManager.Jotunn#IManager#Init">
             <summary>
                 Manager's main init
             </summary>
@@ -5059,7 +5604,7 @@
                 Minimum left/right space that is visible for not selected adjacent tabs.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.PieceManager.Init">
+        <member name="M:Jotunn.Managers.PieceManager.Jotunn#IManager#Init">
             <summary>
                 Creates the piece table container and registers all hooks.
             </summary>
@@ -5127,15 +5672,21 @@
         <member name="M:Jotunn.Managers.PieceManager.RemovePieceCategory(System.String,System.String)">
             <summary>
                 Remove a <see cref="T:Piece.PieceCategory"/> from a table by name.
-                This does not remove the category from the game but "hides" it
-                in the given table.
+                This does noting if a piece is still assigned to the category, remove it before calling this.
             </summary>
             <param name="table">Prefab or item name of the PieceTable.</param>
             <param name="name">Name of the category.</param>
         </member>
         <member name="M:Jotunn.Managers.PieceManager.GetPieceCategories">
             <summary>
-                Get a list of all custom piece category names
+                Get a list of all custom Jötunn piece category names
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Managers.PieceManager.GetPieceCategoriesMap">
+            <summary>
+                Get a complete map of all piece categories.
+                This includes vanilla, Jötunn and other modded categories that use the same system
             </summary>
             <returns></returns>
         </member>
@@ -5172,21 +5723,6 @@
                 Loop all items in the game and get all PieceTables used (vanilla and custom ones).
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.PieceManager.CreatePieceTableCategories">
-            <summary>
-                Create piece categories per table if custom categories were added.
-            </summary>
-        </member>
-        <member name="M:Jotunn.Managers.PieceManager.UpdatePieceCategories">
-            <summary>
-                Reorder piece table tabs if the table if opened currently
-            </summary>
-        </member>
-        <member name="M:Jotunn.Managers.PieceManager.TogglePieceCategories">
-            <summary>
-                Hook for piece table toggle
-            </summary>
-        </member>
         <member name="M:Jotunn.Managers.PieceManager.RegisterInPieceTables">
             <summary>
                 Registers all custom pieces to their respective piece tables.
@@ -5214,6 +5750,11 @@
                 Hook on <see cref="M:Player.OnSpawned"/> to refresh recipes for the custom items.
             </summary>
             <param name="self"></param>
+        </member>
+        <member name="M:Jotunn.Managers.PieceManager.RefreshCategories">
+            <summary>
+                Updates the piece categories, should be called after setting the m_category field of a piece.
+            </summary>
         </member>
         <member name="T:Jotunn.Managers.PrefabManager">
             <summary>
@@ -5254,9 +5795,14 @@
                 Dictionary of all added custom prefabs by name hash.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.PrefabManager.Init">
+        <member name="M:Jotunn.Managers.PrefabManager.Jotunn#IManager#Init">
             <summary>
                 Creates the prefab container and registers all hooks.
+            </summary>
+        </member>
+        <member name="M:Jotunn.Managers.PrefabManager.Activate">
+            <summary>
+                Makes sure the PrefabManager initializes. Only needed if timing is important.
             </summary>
         </member>
         <member name="M:Jotunn.Managers.PrefabManager.AddPrefab(UnityEngine.GameObject,BepInEx.BepInPlugin)">
@@ -5387,7 +5933,7 @@
                 Only one asset can be associated with a name, this ties to find the best match if there is already a cached one present.
             </summary>
             <param name="map"></param>
-            <param name="unityObject"></param>
+            <param name="newObject"></param>
             <param name="name"></param>
             <returns></returns>
         </member>
@@ -5399,6 +5945,11 @@
         <member name="F:Jotunn.Managers.RenderManager.IsometricRotation">
             <summary>
                 Rotation of the prefab that will result in an isometric view
+            </summary>
+        </member>
+        <member name="F:Jotunn.Managers.RenderManager.cacheRevision">
+            <summary>
+                Appended string to file names to force a cache recreation, if changed
             </summary>
         </member>
         <member name="P:Jotunn.Managers.RenderManager.Instance">
@@ -5413,10 +5964,10 @@
         </member>
         <member name="F:Jotunn.Managers.RenderManager.Layer">
             <summary>
-                Unused Layer in Unity
+                Arbitrary unused Layer in the game
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.RenderManager.Init">
+        <member name="M:Jotunn.Managers.RenderManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
@@ -5556,7 +6107,7 @@
                 Hide .ctor
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.SkillManager.Init">
+        <member name="M:Jotunn.Managers.SkillManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
@@ -5606,12 +6157,22 @@
         </member>
         <member name="E:Jotunn.Managers.SynchronizationManager.OnConfigurationSynchronized">
             <summary>
-                Event triggered after server configuration is applied to client
+                Event triggered after configuration has been synced on either the server or client
+            </summary>
+        </member>
+        <member name="E:Jotunn.Managers.SynchronizationManager.OnSyncingConfiguration">
+            <summary>
+                Event triggered before syncing configuration on either the server or client
             </summary>
         </member>
         <member name="E:Jotunn.Managers.SynchronizationManager.OnAdminStatusChanged">
             <summary>
                 Event triggered after a clients admin status changed on the server
+            </summary>
+        </member>
+        <member name="E:Jotunn.Managers.SynchronizationManager.OnConfigurationWindowClosed">
+            <summary>
+                Event triggered after the in-game configuration manager window is closed
             </summary>
         </member>
         <member name="P:Jotunn.Managers.SynchronizationManager.Instance">
@@ -5626,11 +6187,11 @@
         </member>
         <member name="P:Jotunn.Managers.SynchronizationManager.PlayerIsAdmin">
             <summary>
-                Clientside indicator if the current player has admin status on 
+                Clientside indicator if the current player has admin status on
                 the current world, always true on local games
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.SynchronizationManager.Init">
+        <member name="M:Jotunn.Managers.SynchronizationManager.Jotunn#IManager#Init">
             <summary>
                 Manager's main init
             </summary>
@@ -5740,6 +6301,11 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:Jotunn.Managers.SynchronizationManager.InvokeOnConfigurationWindowClosed">
+            <summary>
+                Safely invoke the <see cref="E:Jotunn.Managers.SynchronizationManager.OnConfigurationWindowClosed"/> event
+            </summary>
+        </member>
         <member name="M:Jotunn.Managers.SynchronizationManager.FejdStartup_Awake">
             <summary>
                 Initial cache the config values of dependent plugins and register ourself to config change events
@@ -5788,17 +6354,23 @@
                 Reset configs which may have been overwritten with server values to the local value
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.SynchronizationManager.InvokeOnConfigurationSynchronized(System.Boolean)">
+        <member name="M:Jotunn.Managers.SynchronizationManager.InvokeOnConfigurationSynchronized(System.Boolean,System.Collections.Generic.HashSet{System.String})">
             <summary>
                 Safely invoke the <see cref="E:Jotunn.Managers.SynchronizationManager.OnConfigurationSynchronized"/> event
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.SynchronizationManager.ApplyConfigZPackage(ZPackage,System.Boolean@)">
+        <member name="M:Jotunn.Managers.SynchronizationManager.InvokeOnSyncingConfiguration">
+            <summary>
+                Safely invoke the <see cref="E:Jotunn.Managers.SynchronizationManager.OnSyncingConfiguration"/> event
+            </summary>
+        </member>
+        <member name="M:Jotunn.Managers.SynchronizationManager.ApplyConfigZPackage(ZPackage,System.Boolean@,System.Collections.Generic.HashSet{System.String}@)">
             <summary>
                 Apply received configuration values locally and regenerate the cache
             </summary>
             <param name="configPkg">Package of config tuples</param>
             <param name="initial">Indicator if this was an initial config package</param>
+            <param name="pluginGUIDs">Indicator if this was an initial config package</param>
         </member>
         <member name="M:Jotunn.Managers.SynchronizationManager.GenerateConfigZPackage(System.Boolean,System.Collections.Generic.List{System.Tuple{System.String,System.String,System.String,System.String}})">
             <summary>
@@ -5868,7 +6440,7 @@
                 Container to hold all Queues.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.UndoManager.Init">
+        <member name="M:Jotunn.Managers.UndoManager.Jotunn#IManager#Init">
             <summary>
                 Registers all hooks.
             </summary>
@@ -6001,7 +6573,7 @@
                 Container for custom locations in the DontDestroyOnLoad scene.
             </summary>
         </member>
-        <member name="M:Jotunn.Managers.ZoneManager.Init">
+        <member name="M:Jotunn.Managers.ZoneManager.Jotunn#IManager#Init">
             <summary>
                 Initialize the manager
             </summary>
@@ -6033,6 +6605,16 @@
                 Don't create a separate container if you won't alter the prefab afterwards as it creates a new instance for the container.
             </summary>
             <param name="gameObject">Instantiated and hierarchy disabled location prefab</param>
+        </member>
+        <member name="M:Jotunn.Managers.ZoneManager.CreateLocationContainer(UnityEngine.AssetBundle,System.String)">
+            <summary>
+                Loads and spawns a GameObject from an AssetBundle as a location container.<br />
+                The copy is disabled, so any Components in instantiated child GameObjects will not start their lifecycle.<br />
+                Use this if you plan to alter your location prefab in code after importing it. <br />
+                Don't create a separate container if you won't alter the prefab afterwards as it creates a new instance for the container.
+            </summary>
+            <param name="assetBundle">A preloaded <see cref="T:UnityEngine.AssetBundle"/></param>
+            <param name="assetName">Name of the prefab in the bundle to be instantiated as the location cotainer</param>
         </member>
         <member name="M:Jotunn.Managers.ZoneManager.CreateLocationContainer(UnityEngine.GameObject,System.Boolean)">
             <summary>
@@ -6648,10 +7230,17 @@
         </member>
         <member name="M:Jotunn.Utils.AssetUtils.LoadTextFromResources(System.String,System.Reflection.Assembly)">
             <summary>
-                Load an assembly-embedded file as a char string />
+                Load an assembly-embedded file as a <see cref="T:System.String" />. Use this if the automatic detection of the assembly fails.
             </summary>
             <param name="fileName">Name of the file. Folders are point-seperated e.g. folder/file.json becomes folder.file.json</param>
             <param name="resourceAssembly">Executing assembly</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Utils.AssetUtils.LoadTextFromResources(System.String)">
+            <summary>
+                Load an assembly-embedded file as a <see cref="T:System.String" />. The calling assembly is automatically detected.
+            </summary>
+            <param name="fileName">Name of the file. Folders are point-seperated e.g. folder/file.json becomes folder.file.json</param>
             <returns></returns>
         </member>
         <member name="M:Jotunn.Utils.AssetUtils.LoadText(System.String)">
@@ -6781,6 +7370,11 @@
         <member name="P:Jotunn.Utils.ConfigurationSynchronizationEventArgs.InitialSynchronization">
             <summary>
                 Is this the initial synchronization?
+            </summary>
+        </member>
+        <member name="P:Jotunn.Utils.ConfigurationSynchronizationEventArgs.UpdatedPluginGUIDs">
+            <summary>
+                GUID for each Plugin that received configuration data.
             </summary>
         </member>
         <member name="M:Jotunn.Utils.ExtEquipment.VisEquipment_UpdateEquipmentVisuals(VisEquipment)">
@@ -7013,6 +7607,56 @@
         <member name="P:Jotunn.Utils.IModPrefab.SourceMod">
             <summary>
                 Reference to the <see cref="T:BepInEx.BepInPlugin"/> which added this prefab.
+            </summary>
+        </member>
+        <member name="T:Jotunn.Utils.InputUtils">
+            <summary>
+                Utility class for converting inputs to different formats
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.KeyCodeToKey(UnityEngine.KeyCode)">
+            <summary>
+                Translates a Unity <see cref="T:UnityEngine.KeyCode"/> KeyCode to a InputSystem <see cref="T:UnityEngine.InputSystem.Key"/>
+            </summary>
+            <param name="key"></param>
+            <returns>The matching Key or Key.None, if not assignable</returns>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.TryKeyCodeToMouseButton(UnityEngine.KeyCode,UnityEngine.InputSystem.LowLevel.MouseButton@)">
+            <summary>
+                Tries to convert a <see cref="T:UnityEngine.KeyCode"/> KeyCode to a InputSystem <see cref="T:UnityEngine.InputSystem.LowLevel.MouseButton"/>
+            </summary>
+            <param name="key"></param>
+            <param name="mouseButton"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadKeyCode(Jotunn.Managers.InputManager.GamepadButton)">
+            <summary>
+                Translates a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its <see cref="T:UnityEngine.KeyCode"/> value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadInput(Jotunn.Managers.InputManager.GamepadButton)">
+            <summary>
+                Translates a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its axis string value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadString(Jotunn.Managers.InputManager.GamepadButton)">
+            <summary>
+                Translates a <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> to its printable string value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadButton(GamepadInput)">
+            <summary>
+                Translates an axis string to its <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadButton(System.String)">
+            <summary>
+                Translate an axis string to its <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> value
+            </summary>
+        </member>
+        <member name="M:Jotunn.Utils.InputUtils.GetGamepadButton(UnityEngine.KeyCode)">
+            <summary>
+                Translates a <see cref="T:UnityEngine.KeyCode"/> to its <see cref="T:Jotunn.Managers.InputManager.GamepadButton"/> value
             </summary>
         </member>
         <member name="T:Jotunn.Utils.ModCompatibility">
@@ -7517,6 +8161,11 @@
                 Custom commands added by that mod
             </summary>
         </member>
+        <member name="M:Jotunn.Utils.PatchInit.InitializePatches">
+            <summary>
+                Invoke patch initialization methods for all loaded mods.
+            </summary>
+        </member>
         <member name="T:Jotunn.Utils.PatchInitAttribute">
             <summary>
                 Priority attribute for PatchInitalizer.
@@ -7735,6 +8384,11 @@
                 Dumps all shader information of a GameObject and its childs onto debug log
             </summary>
             <param name="gameObject"></param>
+        </member>
+        <member name="T:Jotunn.Utils.SyncingConfigurationEventArgs">
+            <summary>
+                Event args class for syncing configuration event
+            </summary>
         </member>
         <member name="T:Jotunn.Utils.UndoActions">
             <summary>
