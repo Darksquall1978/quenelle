@@ -7,7 +7,7 @@ cd..
 cd..
 @echo off
 
-@echo MAJ du --16/11/2022-- 00H15
+@echo MAJ du --18/12/2023-- 00H15
 
 timeout /t 2 /nobreak > nul
 @echo  suppression du .git
